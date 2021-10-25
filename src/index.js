@@ -26,5 +26,4 @@ const port = config.get('SERVER.port');
  app.listen(port || 3000, () => {
     console.log(`Escuchando API en http://localhost:${port}`);
  });
-
  
