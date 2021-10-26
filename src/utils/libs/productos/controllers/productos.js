@@ -24,6 +24,7 @@ class ProductosController {
    async consultarProductos(){
     let resp = await _productosDAO.consultarProductos();
     return resp.rows;
+    
       
     }
 

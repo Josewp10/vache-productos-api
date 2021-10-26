@@ -18,7 +18,8 @@ app.get('/', (req,res) =>{
 });
 
 //routes
-
+const ruta_productos = require('./utils/libs/productos/Routes/productos');
+app.use(ruta_productos);
 //Port
 const port = config.get('SERVER.port');
 

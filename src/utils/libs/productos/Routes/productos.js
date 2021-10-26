@@ -4,7 +4,10 @@ const {success, errorResponse} = require('../../../responses');
 
 const router = express.Router();
 const _productosController = new ProductosController;
-
+/**
+   * permite la vizualizacion de los productos
+   *
+   */
 
  router.get('/productos', async (req, res) => {
     try {
@@ -15,7 +18,10 @@ const _productosController = new ProductosController;
     }
 });
 
- 
+  /**
+   * permite la vizualizacion de uno de los productos
+   *  @param codigo
+   */
 
  router.get('/productos/:codigo', async (req, res) => {
     let codigo = req.params.codigo;
@@ -30,7 +36,10 @@ const _productosController = new ProductosController;
 });
 
 
-
+ /**
+   * permite la insercion de los productos
+   *  @param productos
+   */
 
 router.post('/productos', async (req, res) => {
     try {
@@ -42,6 +51,10 @@ router.post('/productos', async (req, res) => {
       errorResponse(req, res, 'ERROR', error);
     }
   });
+  /**
+   * permite la eliminacion de los productos
+   * @param codigo
+   */
 
   router.delete('/productos/:codigo', async (req, res) => {
     let codigo = req.params.codigo;
@@ -53,6 +66,11 @@ router.post('/productos', async (req, res) => {
     }
   
   });
+  /**
+   * permite la actulizacion de los productos
+   *  @param codigo
+   * @param productos
+   */
   router.put("/productos/:codigo", async (req, res) => {
     try {
         let codigo = req.params.codigo;
