@@ -46,7 +46,7 @@ router.post('/productos', async (req, res) => {
       let productos = req.body;
   
       await _productosController.guardarProducto(productos);
-      success(req, res, 'Cliente creado', null, 200);
+      success(req, res, 'producto creado', null, 200);
     } catch (error) {
       errorResponse(req, res, 'ERROR', error);
     }
@@ -60,7 +60,7 @@ router.post('/productos', async (req, res) => {
     let codigo = req.params.codigo;
     try {
       await _productosController.eliminarProducto(codigo);
-      success(req, res, 'Cliente eliminado', null, 200);
+      success(req, res, 'producto eliminado', null, 200);
     } catch (error) {
       errorResponse(req, res, 'ERROR', error);
     }
